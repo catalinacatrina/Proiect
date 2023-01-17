@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Car DataBase</title>
+		
+		<style>
+					
+			#ui {
+			  border-radius: 25px;
+			  border: 2px solid black;
+			  padding: 20px; 
+			  width : 50%;
+			  height: 80%;  
+			}
+			
+			.modelList {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 5px;
+				padding: 20px;
+			}
+			
+			.car {
+				background-color: #f1f1f1;
+				border: 1px solid #ccc;
+				padding: 10px;
+			}
+			
+			.warp {
+				padding: 2px;
+			}
+			
+		</style>
+		
+		<script src="../script.js" ></script>
+	</head>
+	<body>
+		<h2>Car Model Database</h3>
+		<div id="ui" >
+			<h4>Please enter your car model</h1>
+			<div class='warp'>
+				<input type="text" id="modelName" placeholder="model name">
+				<input type="number" id="modelYear" placeholder="year of production" name="year" min="1900" max="2023">
+			</div>
+			
+			<div class='warp'>
+				<label for="colorpicker">Model Color: </label>
+				<input type="color" id="colorpicker" value="#ff00ff">
+			</div>
+			
+			<input type="button" value="Register!" id="register">
+		</div>
+		<div class="modelList" ></div>
+	</body>
+</html>
